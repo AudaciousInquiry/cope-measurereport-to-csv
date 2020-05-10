@@ -8,12 +8,12 @@
   },
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: ExampleNJ-20200411-FEMADailyHospitalCOVID19Reporting</p><p><b>meta</b>: </p><p><b>identifier</b>: urn:uuid:d4806d7e-876e-11ea-1163-09173f13e4c5</p><p><b>status</b>: complete</p><p><b>type</b>: summary</p><p><b>measure</b>: <a href=\"http://hl7.org/fhir/us/saner/Measure/FEMADailyHospitalCOVID19Reporting\">http://hl7.org/fhir/us/saner/Measure/FEMADailyHospitalCOVID19Reporting</a></p><p><b>subject</b>: <a href=\"Location-states-NJ.html\">State of New Jersey. Generated Summary: id: states-NJ; 34</a></p><p><b>date</b>: Apr 11, 2020, 12:00:00 AM</p><p><b>reporter</b>: <a href=\"Organization-NJ-DPH.html\">New Jersey Department of Public Health. Generated Summary: id: NJ-DPH; name: New Jersey Department of Public Health</a></p><p><b>period</b>: Apr 11, 2020, 12:00:00 AM --&gt; Apr 11, 2020, 12:00:00 AM</p><blockquote><p><b>group</b></p><p><b>code</b>: Percent Positive among Newly Resulted Tests <span style=\"background: LightGoldenRodYellow\">(Details : {http://hl7.org/fhir/us/saner/CodeSystem/MeasureGroupSystem code 'positiveIncreasePercent' = 'Percent Positive among Newly Resulted Tests)</span></p><blockquote><p><b>population</b></p><p><b>code</b>: New Diagnostic Tests Ordered/Received <span style=\"background: LightGoldenRodYellow\">(Details : {http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem code 'totalOrdersIncrease' = 'New Diagnostic Tests Ordered/Received; {http://terminology.hl7.org/CodeSystem/measure-population code 'initial-population' = 'Initial Population)</span></p><p><b>count</b>: </p></blockquote></blockquote><p><b style=\"color: maroon\">Exception generating Narrative: null</b></p></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: ExampleNJ-20200411-FEMADailyHospitalCOVID19Reporting</p><p><b>meta</b>: </p><p><b>identifier</b>: urn:uuid:375c39eb-9219-11ea-1863-09173f13e4c5</p><p><b>status</b>: complete</p><p><b>type</b>: summary</p><p><b>measure</b>: <a href=\"http://hl7.org/fhir/us/saner/Measure/FEMADailyHospitalCOVID19Reporting\">http://hl7.org/fhir/us/saner/Measure/FEMADailyHospitalCOVID19Reporting</a></p><p><b>subject</b>: <a href=\"Location-states-NJ.html\">State of New Jersey. Generated Summary: id: states-NJ; 34</a></p><p><b>date</b>: Apr 11, 2020, 12:00:00 AM</p><p><b>reporter</b>: <a href=\"Organization-NJ-DPH.html\">New Jersey Department of Public Health. Generated Summary: id: NJ-DPH; name: New Jersey Department of Public Health</a></p><p><b>period</b>: Apr 11, 2020, 12:00:00 AM --&gt; Apr 11, 2020, 12:00:00 AM</p><blockquote><p><b>group</b></p><p><b>code</b>: Percent Positive among Newly Resulted Tests <span style=\"background: LightGoldenRodYellow\">(Details : {http://hl7.org/fhir/us/saner/CodeSystem/MeasureGroupSystem code 'positiveIncreasePercent' = 'Percent Positive among Newly Resulted Tests)</span></p><blockquote><p><b>population</b></p><p><b>code</b>: New Diagnostic Tests Ordered/Received <span style=\"background: LightGoldenRodYellow\">(Details : {http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem code 'totalOrdersIncrease' = 'New Diagnostic Tests Ordered/Received; {http://terminology.hl7.org/CodeSystem/measure-population code 'initial-population' = 'Initial Population)</span></p><p><b>count</b>: </p></blockquote></blockquote><p><b style=\"color: maroon\">Exception generating Narrative: null</b></p></div>"
   },
   "identifier": [
     {
       "system": "urn:ietf:rfc:3986",
-      "value": "urn:uuid:d4806d7e-876e-11ea-1163-09173f13e4c5"
+      "value": "urn:uuid:375c39eb-9219-11ea-1863-09173f13e4c5"
     }
   ],
   "status": "complete",
@@ -114,7 +114,13 @@
           },
           "count": 3563
         }
-      ]
+      ],
+      "measureScore": {
+        "value": 53.42,
+        "unit": "%",
+        "system": "http://unitsofmeasure.org",
+        "code": "%"
+      }
     },
     {
       "code": {
@@ -200,7 +206,13 @@
           },
           "count": 58151
         }
-      ]
+      ],
+      "measureScore": {
+        "value": 48.38,
+        "unit": "%",
+        "system": "http://unitsofmeasure.org",
+        "code": "%"
+      }
     }
   ]
 }
