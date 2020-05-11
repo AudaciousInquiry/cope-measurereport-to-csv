@@ -57,9 +57,23 @@ public class SanerCSVAdapterController {
 			// Load JSON file
 			ObjectMapper objectMapper = new ObjectMapper();
 			JsonNode jsonNode = objectMapper.readTree(jsonFile.getInputStream());
-			// For each header element get values from the JSON
-			csvFile.addRecord(getMeasureRecord(csvFile, jsonNode));
-
+			JsonNode resourceType = jsonNode.get("resourceType");
+			if(resourceType != null && resourceType.asText().equals("Bundle"))
+			{
+				JsonNode entriesNode = jsonNode.get("entry");
+				Iterator<JsonNode> entryNodeIter = entriesNode.iterator();
+				while(entryNodeIter.hasNext())
+				{
+					JsonNode entryNode = entryNodeIter.next();
+					JsonNode resourceNode = entryNode.get("resource");
+					csvFile.addRecord(getMeasureRecord(csvFile, resourceNode));
+				}
+			}
+			else
+			{
+				// For each header element get values from the JSON
+				csvFile.addRecord(getMeasureRecord(csvFile, jsonNode));
+			}
 			responseBody = new StreamingResponseBody() {
 				@Override
 				public void writeTo(OutputStream out) throws IOException {
@@ -83,7 +97,7 @@ public class SanerCSVAdapterController {
 		StringBuffer record = new StringBuffer();
 		for (String header : csvHeaders) {
 			if (header.equals("date")) {
-				String dateVal = jsonNode.get("date").asText();
+				String dateVal = jsonNode.get("date") != null ? jsonNode.get("date").asText() : "";
 				record.append(dateVal + ",");
 				continue;
 			} else if (header.equals("state")) {
@@ -103,7 +117,7 @@ public class SanerCSVAdapterController {
 	public String getStateValue(JsonNode jsonNode) {
 		JsonPointer jsonPointer = JsonPointer.compile("/subject/identifier");
 		JsonNode node = jsonNode.at(jsonPointer);
-		return node.get("value").asText();
+		return node.get("value") != null ? node.get("value").asText() : "";
 	}
 
 	public SanerCsvFile getSanerCSVFile(List<Mapping> mappings) {
@@ -112,14 +126,8 @@ public class SanerCSVAdapterController {
 			if (mapping.column != null && !mapping.column.isEmpty() && !mapping.getItem().equals("NULL"))
 				header.add(mapping.column);
 		}
-		System.out.println(header);
 		SanerCsvFile csvFile = new SanerCsvFile(header);
 		return csvFile;
-	}
-
-	public String getStateJSONElementValue(JsonNode jsonNode, String mappingElement) {
-		System.out.println("jsonNode: " + jsonNode.toPrettyString());
-		return jsonNode.get("date").asText();
 	}
 
 	public String getJSONElementValue(JsonNode jsonNode, String mappingElement) {
@@ -167,7 +175,6 @@ public class SanerCSVAdapterController {
 				if (current.getSource() == null || current.getSource().isEmpty() || current.getSource().equals("All")
 						|| current.getSource().equals(source))
 					mappings.add(current);
-				System.out.println(current.toString());
 			}
 		}
 		return mappings;
