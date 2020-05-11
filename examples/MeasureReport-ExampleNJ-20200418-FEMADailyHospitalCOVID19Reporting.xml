@@ -6,11 +6,11 @@
     <profile value="http://hl7.org/fhir/us/saner/StructureDefinition/PublicHealthMeasureReport"/>
   </meta>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: ExampleNJ-20200418-FEMADailyHospitalCOVID19Reporting</p><p><b>meta</b>: </p><p><b>identifier</b>: urn:uuid:d4806e34-876e-11ea-1163-09173f13e4c5</p><p><b>status</b>: complete</p><p><b>type</b>: summary</p><p><b>measure</b>: <a href="http://hl7.org/fhir/us/saner/Measure/FEMADailyHospitalCOVID19Reporting">http://hl7.org/fhir/us/saner/Measure/FEMADailyHospitalCOVID19Reporting</a></p><p><b>subject</b>: <a href="Location-states-NJ.html">State of New Jersey. Generated Summary: id: states-NJ; 34</a></p><p><b>date</b>: Apr 18, 2020, 12:00:00 AM</p><p><b>reporter</b>: <a href="Organization-NJ-DPH.html">New Jersey Department of Public Health. Generated Summary: id: NJ-DPH; name: New Jersey Department of Public Health</a></p><p><b>period</b>: Apr 18, 2020, 12:00:00 AM --&gt; Apr 18, 2020, 12:00:00 AM</p><blockquote><p><b>group</b></p><p><b>code</b>: Percent Positive among Newly Resulted Tests <span style="background: LightGoldenRodYellow">(Details : {http://hl7.org/fhir/us/saner/CodeSystem/MeasureGroupSystem code 'positiveIncreasePercent' = 'Percent Positive among Newly Resulted Tests)</span></p><blockquote><p><b>population</b></p><p><b>code</b>: New Diagnostic Tests Ordered/Received <span style="background: LightGoldenRodYellow">(Details : {http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem code 'totalOrdersIncrease' = 'New Diagnostic Tests Ordered/Received; {http://terminology.hl7.org/CodeSystem/measure-population code 'initial-population' = 'Initial Population)</span></p><p><b>count</b>: </p></blockquote></blockquote><p><b style="color: maroon">Exception generating Narrative: null</b></p></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: ExampleNJ-20200418-FEMADailyHospitalCOVID19Reporting</p><p><b>meta</b>: </p><p><b>identifier</b>: urn:uuid:375c3a7e-9219-11ea-1863-09173f13e4c5</p><p><b>status</b>: complete</p><p><b>type</b>: summary</p><p><b>measure</b>: <a href="http://hl7.org/fhir/us/saner/Measure/FEMADailyHospitalCOVID19Reporting">http://hl7.org/fhir/us/saner/Measure/FEMADailyHospitalCOVID19Reporting</a></p><p><b>subject</b>: <a href="Location-states-NJ.html">State of New Jersey. Generated Summary: id: states-NJ; 34</a></p><p><b>date</b>: Apr 18, 2020, 12:00:00 AM</p><p><b>reporter</b>: <a href="Organization-NJ-DPH.html">New Jersey Department of Public Health. Generated Summary: id: NJ-DPH; name: New Jersey Department of Public Health</a></p><p><b>period</b>: Apr 18, 2020, 12:00:00 AM --&gt; Apr 18, 2020, 12:00:00 AM</p><blockquote><p><b>group</b></p><p><b>code</b>: Percent Positive among Newly Resulted Tests <span style="background: LightGoldenRodYellow">(Details : {http://hl7.org/fhir/us/saner/CodeSystem/MeasureGroupSystem code 'positiveIncreasePercent' = 'Percent Positive among Newly Resulted Tests)</span></p><blockquote><p><b>population</b></p><p><b>code</b>: New Diagnostic Tests Ordered/Received <span style="background: LightGoldenRodYellow">(Details : {http://hl7.org/fhir/us/saner/CodeSystem/MeasurePopulationSystem code 'totalOrdersIncrease' = 'New Diagnostic Tests Ordered/Received; {http://terminology.hl7.org/CodeSystem/measure-population code 'initial-population' = 'Initial Population)</span></p><p><b>count</b>: </p></blockquote></blockquote><p><b style="color: maroon">Exception generating Narrative: null</b></p></div>
   </text>
   <identifier>
     <system value="urn:ietf:rfc:3986"/>
-    <value value="urn:uuid:d4806e34-876e-11ea-1163-09173f13e4c5"/>
+    <value value="urn:uuid:375c3a7e-9219-11ea-1863-09173f13e4c5"/>
   </identifier>
   <status value="complete"/>
   <type value="summary"/>
@@ -90,6 +90,12 @@
       </code>
       <count value="2953"/>
     </population>
+    <measureScore>
+      <value value="58.05"/>
+      <unit value="%"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="%"/>
+    </measureScore>
   </group>
   <group>
     <code>
@@ -158,5 +164,11 @@
       </code>
       <count value="81420"/>
     </population>
+    <measureScore>
+      <value value="50.09"/>
+      <unit value="%"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="%"/>
+    </measureScore>
   </group>
 </MeasureReport>
